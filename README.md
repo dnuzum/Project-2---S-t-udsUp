@@ -25,7 +25,7 @@ __Credits:__
 
 __Wireframe:__
 
-[Wireframes Folder](../tree/master/Wireframes)
+[Wireframes Folder](.../tree/master/Wireframes)
 
 
 
