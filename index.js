@@ -13,7 +13,7 @@ app.get("/", function(req, res) {
 
 // Google Search Auth
 app.get("/google51f837d0a25e2269.html", function(req, res) {
-	res.render("../google51f837d0a25e2269.html");
+	res.render("google51f837d0a25e2269.html");
 });
 
 var port = process.env.PORT || 4000;
