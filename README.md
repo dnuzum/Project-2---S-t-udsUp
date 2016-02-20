@@ -1,4 +1,4 @@
-# Project-1---Blackjack
+# Project-2---S(t)uds Up
 #### Derek Nuzum - WDI SEA 06 Project 2
 
 __Overview:__
@@ -25,7 +25,7 @@ __Credits:__
 
 __Wireframe:__
 
-[Wireframes Folder](.../tree/master/Wireframes)
+[Wireframes Folder](https://github.com/dnuzum/Project-2---S-t-udsUp/tree/master/Wireframes)
 
 
 
