@@ -25,7 +25,7 @@ __Credits:__
 
 __Wireframe:__
 
-[Wireframes Folder](../blob/master/README.md)
+[Wireframes Folder](../tree/master/Wireframes)
 
 
 
