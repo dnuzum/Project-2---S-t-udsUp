@@ -25,7 +25,7 @@ __Credits:__
 
 __Wireframe:__
 
-![alt text](https://github.com/dnuzum/Project-1---Blackjack/blob/master/Google%20ChromeScreenSnapz001.png "Blackjack Wireframe")
+[Wireframes Folder](../blob/master/README.md)
 
 
 
