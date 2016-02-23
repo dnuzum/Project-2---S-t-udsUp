@@ -9,6 +9,14 @@ app.use(express.static(__dirname + '/static/'));
 app.get("/", function(req, res) {
 	res.render("index");
 });
+// Pub Page
+app.get("/pubs", function (req, res) {
+	res.render("pubs");
+});
+// Meet Page
+app.get("/meet", function (req, res) {
+	res.render("meet");
+});
 
 
 
