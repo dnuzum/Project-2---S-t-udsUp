@@ -1,9 +1,12 @@
 var express = require('express');
+var db = require('./models');
+
 
 var app = express();
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/static/'));
+
 
 // Home Page
 app.get("/", function(req, res) {
@@ -16,6 +19,14 @@ app.get("/pubs", function (req, res) {
 // Meet Page
 app.get("/meet", function (req, res) {
 	res.render("meet");
+});
+// Login Page
+app.get("/login", function(req, res) {
+	res.render("auth/login");
+});
+// Signup Page
+app.get("/signup", function(req, res) {
+	res.render("auth/signup")
 });
 
 

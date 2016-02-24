@@ -1,0 +1,54 @@
+<!-- Login login.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body>
+
+  <header>
+      <% include ../partials/header %>
+  </header>
+
+  <style>
+  legend {
+    text-align: center;
+  }
+  </style>
+
+  <main class = "container">
+  <div class="row">
+    <div class="col-xs-0 col-sm-0 col-md-4 col-lg-4">
+
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+      <div class="well">
+        <form action="" method="POST" role="form">
+          <legend>Login</legend>
+        
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Email Address">
+            <label for="password1">Your Password</label>
+            <input type="password" class="form-control" id="password1" placeholder="Password">
+          </div>
+          
+          <div style="text-align: center">
+            <button type="submit" class="btn btn-success btn-fill">Login</button>
+            <a href="/signup"><button type="button" class="btn btn-primary btn-fill">Sign Up!</button></a>
+          </div>  
+        </form>
+      </div>
+    </div>
+    <div class="col-xs-0 col-sm-0 col-md-4 col-lg-4">
+
+    </div>
+      
+    </div>
+  </div>
+  </main>
+
+  <% include ../partials/footer %>
+    
+</body>
+</html>
