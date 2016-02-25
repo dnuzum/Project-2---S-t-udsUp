@@ -28,9 +28,15 @@
               </a>
           </li>
           <li>
-             <a href="/auth/login">
+            <% if (currentUser) { %>
+              <a href="/auth/logout">
+                  <i class="pe-7s-user"></i>
+                  <p>Logout <%= currentUser.name %></p>
+            <% } else { %>
+              <a href="/auth/login">
                   <i class="pe-7s-user"></i>
                   <p>Login</p>
+            <% } %>
               </a>
           </li>
         </ul>
@@ -45,6 +51,3 @@
     <% }); %>
   <% } %>
 <% } %>
-<div class="container">
-  <div>Current User: <%= currentUser.name %></div>
-</div>
