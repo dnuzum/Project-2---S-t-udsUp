@@ -53,7 +53,7 @@ router.post('/login', function(req, res) {
 
 router.get('/logout', function(req, res) {
 	req.session.userId = false;
-	req.flash('success', 'You are now logged out');
+	req.flash('success', 'You have been logged out');
 	res.redirect('/');
 });
 

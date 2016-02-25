@@ -13,17 +13,19 @@ app.use(session({
 	resave: false,
 	saveUninitialized: true
 }));
-app.use(flash);
+app.use(flash());
 
 app.use(function(req, res, next) {
 	if (req.session.userId) {
 		db.user.findById(req.session.userId).then(function(user) {
 			req.currentUser = user;
+			res.locals.currentUser = user;
 			next();
 		});
 	} else {
 		req.currentUser = false;
 		res.locals.currentUser = false;
+		next();
 	}
 });
 
@@ -38,7 +40,12 @@ app.get("/pubs", function (req, res) {
 });
 // Meet Page
 app.get("/meet", function (req, res) {
-	res.render("meet");
+	if (req.currentUser) {
+		res.render("meet");
+	} else {
+		req.flash('danger', 'You must be logged in to view this page.');
+		res.redirect('/');
+	}
 });
 // Login Page
 app.get("/auth/login", function(req, res) {
