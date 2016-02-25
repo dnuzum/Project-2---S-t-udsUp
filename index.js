@@ -48,14 +48,14 @@ app.get("/meet", function (req, res) {
 		res.redirect('/');
 	}
 });
-// Login Page
-app.get("/auth/login", function(req, res) {
-	res.render("auth/login");
-});
-// Signup Page
-app.get("/auth/signup", function(req, res) {
-	res.render("auth/signup")
-});
+// // Login Page
+// app.get("/auth/login", function(req, res) {
+// 	res.render("auth/login");
+// });
+// // Signup Page
+// app.get("/auth/signup", function(req, res) {
+// 	res.render("auth/signup")
+// });
 
 app.use('/auth', require('./controllers/auth'));
 

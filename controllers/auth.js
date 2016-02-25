@@ -7,6 +7,7 @@ router.get('/signup', function(req, res) {
 });
 
 router.post('/signup', function(req, res) {
+	if (req.body.password === req.body.password2){
 	db.user.findOrCreate({
 		where: {
 			email: req.body.email
@@ -27,6 +28,10 @@ router.post('/signup', function(req, res) {
 		req.flash('danger', 'Error:', err.message);
 		res.redirect('/auth/signup');
 	});
+	} else {
+		req.flash('danger', 'Your passwords do not match');
+		res.redirect('/auth/signup');
+	}
 });
 
 router.get('/login', function(req, res) {
