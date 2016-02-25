@@ -30,7 +30,7 @@ app.use(function(req, res, next) {
 
 // Home Page
 app.get("/", function(req, res) {
-	res.render("index" {alerts: req.flash()});
+	res.render("index", {alerts: req.flash()});
 });
 // Pub Page
 app.get("/pubs", function (req, res) {

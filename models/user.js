@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
     name: DataTypes.STRING,
     email: DataTypes.STRING,
     password: { 
-      DataTypes.STRING,
+      type: DataTypes.STRING,
       validate: {
         len: {
           args: [8, 99],
@@ -22,7 +22,7 @@ module.exports = function(sequelize, DataTypes) {
       },
       authenticate: function(email, password, callback) {
         this.find({
-          where {email: email}
+          where: {email: email}
         }).then(function(user) {
           if (!user) callback(null, false);
           bcrypt.compare(password, user.password, function(err, result) {

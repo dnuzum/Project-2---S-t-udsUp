@@ -16,10 +16,10 @@ router.post('/signup', function(req, res) {
 			password: req.body.password
 		}
 	}).spread(function(user, created) {
-		if (created {
+		if (created) {
 			req.flash('success', 'Your account has been created!');
 			res.redirect('/');
-		}) else {
+		} else {
 			req.flash('danger', 'Your email is already linked to an account');
 			res.redirect('/auth/signup');
 		}
@@ -30,10 +30,10 @@ router.post('/signup', function(req, res) {
 });
 
 router.get('/login', function(req, res) {
-	res.render('auth/login' {alerts: req.flash()});
+	res.render('auth/login', {alerts: req.flash()});
 });
 
-routher.post('/login', function(req, res) {
+router.post('/login', function(req, res) {
 	var email = req.body.email;
 	var password = req.body.password;
 	db.user.authenticate(email, password, function(err, user) {
