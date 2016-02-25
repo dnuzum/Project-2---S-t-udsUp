@@ -1,16 +1,36 @@
 var express = require('express');
+var bodyParser = require('body-parser');
+var session = require('express-session');
 var db = require('./models');
-
-
+var flash = require('connect-flash');
 var app = express();
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/static/'));
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(session({
+	secret: 'sldkfjoiwfjoi2j4foiwoijf290923ufjsd',
+	resave: false,
+	saveUninitialized: true
+}));
+app.use(flash);
+
+app.use(function(req, res, next) {
+	if (req.session.userId) {
+		db.user.findById(req.session.userId).then(function(user) {
+			req.currentUser = user;
+			next();
+		});
+	} else {
+		req.currentUser = false;
+		res.locals.currentUser = false;
+	}
+});
 
 
 // Home Page
 app.get("/", function(req, res) {
-	res.render("index");
+	res.render("index" {alerts: req.flash()});
 });
 // Pub Page
 app.get("/pubs", function (req, res) {
@@ -21,14 +41,15 @@ app.get("/meet", function (req, res) {
 	res.render("meet");
 });
 // Login Page
-app.get("/login", function(req, res) {
+app.get("/auth/login", function(req, res) {
 	res.render("auth/login");
 });
 // Signup Page
-app.get("/signup", function(req, res) {
+app.get("/auth/signup", function(req, res) {
 	res.render("auth/signup")
 });
 
+app.use('/auth', require('./controllers/auth'));
 
 
 // Google Search Auth
