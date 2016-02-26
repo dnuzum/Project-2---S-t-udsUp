@@ -19,17 +19,9 @@
   <main class = "container">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-      <div class="well">
-        <% if (document).ready(function() { %>
-          $('#calendar').fullCalendar({
-            googleCalendarApiKey: 'process.env.GOOGLE_API_KEY',
-            events: {
-              googleCalendarId: 'studs.up.sea@gmail.com'
-            }
-          });
-        <% }); %>
+        <div class="calendar" id="calendar"></div>
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=studs.up.sea%40gmail.com&amp;color=%238D6F47&amp;src=mls_10531_Seattle%2BSounders%2BFC%23sports%40group.v.calendar.google.com&amp;color=%2329527A&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="650" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
-    </div>
     <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2">
       
     </div>
@@ -47,4 +39,16 @@
   <% include partials/footer %>
     
 </body>
+<script type='text/javascript' src="fullCalendar/gcal.js">
+
+$(document).ready(function() {
+    $('#calendar').fullCalendar({
+        googleCalendarApiKey: process.env.GOOGLE_API_KEY,
+        events: {
+            googleCalendarId: 'studs.up.sea@gmail.com'
+        }
+    });
+});
+
+</script>
 </html>

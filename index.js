@@ -4,7 +4,7 @@ var session = require('express-session');
 var ejsLayouts = require('express-ejs-layouts')
 var db = require('./models');
 var flash = require('connect-flash');
-var fullCalendar = require('fullcalendar');
+// var fullCalendar = require('fullcalendar');
 var app = express();
 
 app.set("view engine", "ejs");
@@ -16,7 +16,7 @@ app.use(session({
 	saveUninitialized: true
 }));
 app.use(flash());
-app.use(fullCalendar());
+// app.use(fullCalendar());
 
 app.use(function(req, res, next) {
 	if (req.session.userId) {

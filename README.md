@@ -17,11 +17,18 @@ __Future Additions:__
 
 __Difficulties:__
 
-* None at the moment
+* Google Calendar API. Could not get it to function. Calendar currently in embedded iframe.
 
 __Credits:__
-* Google Fonts
+* [Node.js](https://nodejs.org/en/)
+* [Express JS](http://expressjs.com/)
+* [Sequelize ORM](http://docs.sequelizejs.com/en/latest/)
+* [Postgres](http://www.postgresql.org/)
+* [Get Sh*t Done Bootstrap Theme](http://www.creative-tim.com/product/get-shit-done-kit)
+* [Bootstrap UI](http://getbootstrap.com/)
 * Google Images
+* Google Calendar
+* Google API
 
 __Wireframe:__
 
