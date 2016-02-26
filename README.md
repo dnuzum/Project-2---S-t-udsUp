@@ -24,11 +24,13 @@ __Credits:__
 * [Express JS](http://expressjs.com/)
 * [Sequelize ORM](http://docs.sequelizejs.com/en/latest/)
 * [Postgres](http://www.postgresql.org/)
+* [Bcrypt](https://github.com/ncb000gt/node.bcrypt.js)
 * [Get Sh*t Done Bootstrap Theme](http://www.creative-tim.com/product/get-shit-done-kit)
 * [Bootstrap UI](http://getbootstrap.com/)
 * Google Images
 * Google Calendar
 * Google API
+* [Seattle Sounders FC](http://www.soundersfc.com/)
 
 __Wireframe:__
 
