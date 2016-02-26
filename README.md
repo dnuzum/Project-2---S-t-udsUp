@@ -13,7 +13,8 @@ __User Stories:__
 
 __Future Additions:__
 
-* App in progress
+* Google Calendar API
+* Add/Join Events
 
 __Difficulties:__
 
