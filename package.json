@@ -25,6 +25,7 @@
     "express-ejs-layouts": "^2.0.0",
     "express-session": "^1.13.0",
     "express-sessions": "^1.0.5",
+    "fullcalendar": "^2.6.1",
     "google-auth-library": "^0.9.7",
     "googleapis": "^2.1.7",
     "passport": "^0.3.2",
